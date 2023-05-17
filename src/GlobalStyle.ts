@@ -5,19 +5,15 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Inter', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
     }
 
     body {
         background-color: #D8E9A8;
     }
 
-    button {
+    button, input {
         border: none;
-        outline: none;
-    }
-
-    input {
         outline: none;
     }
 `
