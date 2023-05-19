@@ -1,6 +1,7 @@
 import axios from 'axios';
+import IResponse from '../interfaces/IResponse';
 
-export const requestData = async (endpoint: string, key: string): Promise<[]> => {
+export const requestData = async (endpoint: string, key: string): Promise<IResponse> => {
     const config = {
         method: 'get',
         url: `https://v3.football.api-sports.io/${endpoint}`,
@@ -10,6 +11,6 @@ export const requestData = async (endpoint: string, key: string): Promise<[]> =>
         }
       };
       
-    const { data } = await axios.request(config);
-    return data.response;
+    const response = await axios.request(config);
+    return response;
 }
