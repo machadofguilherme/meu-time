@@ -6,8 +6,8 @@ import IContext from '../interfaces/IContext';
 
 const AppProvider: React.FC<IPRoute> = ({ children }) => {
     const [key, setKey] = useState('');
-    const [renderSeason, setRenderSeason] = useState(false);
     const [dataTransport, setDataTransport] = useState({});
+    const [step, setStep] = useState('country');
 
     const populateInfo = (country: string, flag: string) => {
       const object = {
@@ -20,10 +20,10 @@ const AppProvider: React.FC<IPRoute> = ({ children }) => {
 
     const data: IContext = {
         key,
-        renderSeason,
+        step,
         dataTransport,
         setKey,
-        setRenderSeason,
+        setStep,
         populateInfo,
     }
 

@@ -15,60 +15,52 @@ interface Props {
 }
 
 const Dashboard: React.FC<Props> = () => {
-    const [isLogout, setIsLogout] = useState(false);
-    const [country, setCountry] = useState<ICountry[]>([]);
-    
-    const navigate = useNavigate();
-    const { key, renderSeason, dataTransport } = useContext(AppContext);
-    
-    useEffect(() => {
-      if (isLogout) {
-        localStorage.clear();
-        navigate('/');
-      }
-    }, [isLogout, navigate]);
+  const [isLogout, setIsLogout] = useState(false);
+  const [country, setCountry] = useState<ICountry[]>([]);
 
-    useEffect(() => {
-      const apiKey = localStorage
-          .getItem('key');
-      
-     if (!apiKey) {
+  const navigate = useNavigate();
+  const { key, step} = useContext(AppContext);
+
+  useEffect(() => {
+    if (isLogout) {
+      localStorage.clear();
       navigate('/');
-     }
-    }, [navigate]);
+    }
+  }, [isLogout, navigate]);
 
-    useEffect(() => {
-      const request = async () => {
-        const response = await requestData('/countries', key);
-        setCountry(response.data.response as ICountry[]);
-        // setCountry(validKeyResponse.data.response as ICountry[]);
-      }
+  useEffect(() => {
+    const apiKey = localStorage
+      .getItem('key');
 
-      request();
-    }, [key]);
+    if (!apiKey) {
+      navigate('/');
+    }
+  }, [navigate]);
 
-    const logout = () => setIsLogout(true);
-    
-    return (
-      <DashboardContainer>
-        <SectionDashboard>
-          <h1>Dashboard</h1>
-          <button onClick={logout}>Sair</button>
-        </SectionDashboard>
-        <form>
-          {
-            renderSeason ? (
-              <Season
-                country={dataTransport.country}
-                flag={dataTransport.flag}
-              />
-            ) : (
-              <Country country={country} />
-            )
-          }
-        </form>
-      </DashboardContainer>
-    )
+  useEffect(() => {
+    const request = async () => {
+      const response = await requestData('/countries', key);
+      setCountry(response.data.response as ICountry[]);
+      // setCountry(validKeyResponse.data.response as ICountry[]);
+    }
+
+    request();
+  }, [key]);
+
+  const logout = () => setIsLogout(true);
+
+  return (
+    <DashboardContainer>
+      <SectionDashboard>
+        <h1>Dashboard</h1>
+        <button onClick={logout}>Sair</button>
+      </SectionDashboard>
+      <form>
+        { step === 'country' && <Country country={country} /> }
+        { step === 'season' && <Season />}
+      </form>
+    </DashboardContainer>
+  )
 }
 
 export default Dashboard

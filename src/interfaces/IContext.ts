@@ -1,8 +1,8 @@
 export default interface IContext {
     key: string;
-    renderSeason: boolean;
+    step: string;
     dataTransport: object;
     setKey: (key: string) => void;
-    setRenderSeason: (bool: boolean) => void;
+    setStep: (component: string) => void;
     populateInfo: (country: string, flag: string) => void;
 }

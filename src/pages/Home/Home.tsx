@@ -23,14 +23,13 @@ const Home = () => {
     }, [navigate]);
 
     const requisitionOperation = async () => {
-        const keyValue = 'logado';
         const response: IResponse = await requestData('/countries', key);
 
         if (response.data.errors.token) {
             setError(true);
         } else {
             setError(false);
-            JSON.stringify(localStorage.setItem('key', keyValue));
+            JSON.stringify(localStorage.setItem('key', key));
             navigate('/app');
         }
     }

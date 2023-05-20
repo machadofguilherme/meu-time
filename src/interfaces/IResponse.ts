@@ -3,7 +3,7 @@ interface IData {
     parameters: unknown[];
     errors: {
       token: string;
-    } | [];
+    };
     results: number;
     paging: {
       current: number;
