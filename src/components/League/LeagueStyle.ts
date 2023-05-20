@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CountryContainer = styled.main`
+export const LeagueContainer = styled.main`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,8 +18,9 @@ export const CountryContainer = styled.main`
     }
 
     img {
-        height: 180px;
-        width: 180px;
+        height: 100px;
+        width: 100px;
+        margin: 1rem;
         border-radius: 1.3rem;
     }
 
@@ -47,4 +48,9 @@ export const CountryContainer = styled.main`
     h3 {
         font-weight: 300;
     }
+`
+
+export const P = styled.p`
+    font-weight: 500;
+    color: #1E5128;
 `

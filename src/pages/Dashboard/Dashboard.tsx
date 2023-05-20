@@ -5,9 +5,9 @@ import { requestData } from "../../utils/fetchApi";
 import Country from "../../components/Country/Country";
 import { ICountry } from "../../interfaces/ICountry";
 import AppContext from "../../context/AppContext";
-import { DashboardContainer, SectionDashboard } from "./DashboardStyle";
 import Season from "../../components/Season/Season";
-// import { validKeyResponse } from "../../data/validKeyResponse";
+import { DashboardContainer, SectionDashboard } from "./DashboardStyle";
+import League from "../../components/League/League";
 
 interface Props {
   country: ICountry[];
@@ -15,22 +15,13 @@ interface Props {
 }
 
 const Dashboard: React.FC<Props> = () => {
-  const [isLogout, setIsLogout] = useState(false);
   const [country, setCountry] = useState<ICountry[]>([]);
 
   const navigate = useNavigate();
-  const { key, step} = useContext(AppContext);
+  const { setIsLogout, step } = useContext(AppContext);
 
   useEffect(() => {
-    if (isLogout) {
-      localStorage.clear();
-      navigate('/');
-    }
-  }, [isLogout, navigate]);
-
-  useEffect(() => {
-    const apiKey = localStorage
-      .getItem('key');
+    const apiKey = localStorage.getItem('key');
 
     if (!apiKey) {
       navigate('/');
@@ -38,14 +29,15 @@ const Dashboard: React.FC<Props> = () => {
   }, [navigate]);
 
   useEffect(() => {
+    const apiKey = String(localStorage.getItem('key'));
+
     const request = async () => {
-      const response = await requestData('/countries', key);
+      const response = await requestData('/countries', apiKey);
       setCountry(response.data.response as ICountry[]);
-      // setCountry(validKeyResponse.data.response as ICountry[]);
     }
 
     request();
-  }, [key]);
+  }, []);
 
   const logout = () => setIsLogout(true);
 
@@ -56,8 +48,9 @@ const Dashboard: React.FC<Props> = () => {
         <button onClick={logout}>Sair</button>
       </SectionDashboard>
       <form>
-        { step === 'country' && <Country country={country} /> }
-        { step === 'season' && <Season />}
+        {step === 'country' && <Country country={country} />}
+        {step === 'season' && <Season />}
+        {step === 'league' && <League />}
       </form>
     </DashboardContainer>
   )

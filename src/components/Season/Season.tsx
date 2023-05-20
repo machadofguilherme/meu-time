@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from "react"
 import { requestData } from "../../utils/fetchApi";
 import IResponse from "../../interfaces/IResponse";
 import AppContext from "../../context/AppContext";
+import { SeasonContainer } from "./SeasonStyle";
+import NextButton from "../NextButton/NextButton";
 
 type Season = number;
 
@@ -17,7 +19,9 @@ const Season = () => {
     const key = (localStorage.getItem('key'));
 
     const request = async () => {
-      const seasonPerLeague: IResponse = await requestData('leagues/seasons', String(key));
+      const seasonPerLeague: IResponse =
+        await requestData('leagues/seasons', String(key));
+
       setSeason(seasonPerLeague.data.response as number[]);
     }
 
@@ -37,26 +41,30 @@ const Season = () => {
   const nextScreen = () => setStep('league');
 
   return (
-    <>
-      <select
-        onChange={({ target }) => setSeasonValue(Number(target.value))}
-      >
-        {
-          season?.map((item: Season, index: number) => (
-            <option key={index} value={item}>
-              {item}
-            </option>
-          ))
-        }
-      </select>
+    <SeasonContainer>
+      <section>
+        <h3>Selecione uma temporada:</h3>
+      </section>
+      
+      <form>
+        <select
+          onChange={({ target }) => setSeasonValue(Number(target.value))}
+        >
+          {
+            season?.map((item: Season, index: number) => (
+              <option key={index} value={item}>
+                {item}
+              </option>
+            ))
+          }
+        </select>
 
-      <button
-        type="button"
-        disabled={!isDisable}
-        onClick={nextScreen}>
-        Próximo
-      </button>
-    </>
+        <NextButton
+          isDisable={isDisable}
+          next={nextScreen}
+        />
+      </form>
+    </SeasonContainer>
   )
 }
 

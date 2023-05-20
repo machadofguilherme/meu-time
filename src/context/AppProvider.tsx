@@ -1,35 +1,45 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 
 import AppContext from './AppContext';
 import IPRoute from '../interfaces/IPRoute'
 import IContext from '../interfaces/IContext';
+import { useNavigate } from 'react-router-dom';
 
 const AppProvider: React.FC<IPRoute> = ({ children }) => {
-    const [key, setKey] = useState('');
-    const [dataTransport, setDataTransport] = useState({});
-    const [step, setStep] = useState('country');
+  const [isLogout, setIsLogout] = useState(false);
+  const [dataTransport, setDataTransport] = useState({});
+  const [step, setStep] = useState('country');
 
-    const populateInfo = (country: string, flag: string) => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isLogout) {
+      localStorage.clear();
+      navigate('/');
+    }
+  }, [isLogout, navigate]);
+
+  const populateInfo = useCallback(() =>
+    (country: string, flag: string) => {
       const object = {
         country,
         flag
       }
 
       setDataTransport(object);
-    }
+    }, []);
 
-    const data: IContext = {
-        key,
-        step,
-        dataTransport,
-        setKey,
-        setStep,
-        populateInfo,
-    }
+  const data: IContext = {
+    step,
+    dataTransport,
+    setStep,
+    setIsLogout,
+    populateInfo,
+  }
 
   return (
     <AppContext.Provider value={data}>
-        {children}
+      {children}
     </AppContext.Provider>
   )
 }

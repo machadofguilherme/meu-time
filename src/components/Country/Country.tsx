@@ -1,9 +1,10 @@
-import PropTypes from "prop-types";
 import React, { useContext, useEffect, useState } from 'react';
 
 import AppContext from "../../context/AppContext";
 import { ICountry } from "../../interfaces/ICountry";
 import { CountryContainer } from "./CountryStyle";
+import Image from '../Image/Image';
+import NextButton from '../NextButton/NextButton';
 
 interface Props {
     country: ICountry[]
@@ -24,6 +25,8 @@ const Country: React
 
                 setFlag(findByName[0].flag);
                 setIsDisable(true);
+
+                localStorage.setItem('country', countryName);
             } else {
                 setFlag('');
             }
@@ -53,35 +56,20 @@ const Country: React
                                 ))
                             }
                         </select>
-                        <section>
-                            {
-                                flag && (
-                                    <div>
-                                        <img src={`${flag}`} />
-                                        <p>{countryName}</p>
-                                        <p>
-                                            <span>Isso está certo?</span>
-                                        </p>
-                                    </div>
 
-                                )
-                            }
-                        </section>
+                        <Image
+                            image={flag}
+                            title={countryName}
+                        />
 
-                        <button
-                            type="button"
-                            disabled={!isDisable}
-                            onClick={nextScreen}>
-                            Próximo
-                        </button>
+                        <NextButton
+                            isDisable={isDisable}
+                            next={nextScreen}
+                        />
                     </section>
                 </CountryContainer>
             </>
         )
     }
-
-Country.propTypes = {
-    country: PropTypes.any.isRequired,
-}
 
 export default Country

@@ -7,31 +7,31 @@ import IPRoute from "../interfaces/IPRoute";
 
 const PrivateRouter: React
     .FC<IPRoute> = ({ children }) => {
-    const [isLogged, setIsLogged] = useState(false);
-    const navigate = useNavigate();
+        const [isLogged, setIsLogged] = useState(false);
+        const navigate = useNavigate();
 
-    useEffect(() => {
-        const key = localStorage
-            .getItem('key');
-        
-        if (key) {
-            setIsLogged(true);
-            navigate('/app');
-        } else {
-            setIsLogged(false);
-            navigate('/');
-        }
-    }, [navigate]);
+        useEffect(() => {
+            const key = localStorage
+                .getItem('key');
 
-    return (
-        <>
-            { isLogged ? children : <Home /> }
-        </>
-    );
-}
+            if (key) {
+                setIsLogged(true);
+                navigate('/app');
+            } else {
+                setIsLogged(false);
+                navigate('/');
+            }
+        }, [navigate]);
+
+        return (
+            <>
+                {isLogged ? children : <Home />}
+            </>
+        );
+    }
 
 export default PrivateRouter;
 
 PrivateRouter.propTypes = {
-  children: PropTypes.object.isRequired
+    children: PropTypes.node.isRequired
 }

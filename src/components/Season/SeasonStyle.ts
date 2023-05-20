@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CountryContainer = styled.main`
+export const SeasonContainer = styled.main`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,12 +15,6 @@ export const CountryContainer = styled.main`
         color: #D8E9A8;
         font-weight: 500;
         border: none;
-    }
-
-    img {
-        height: 180px;
-        width: 180px;
-        border-radius: 1.3rem;
     }
 
     button {

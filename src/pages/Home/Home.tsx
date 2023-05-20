@@ -1,25 +1,23 @@
-import { FormEvent, useState, useEffect, useContext } from "react"
+import { FormEvent, useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom";
 import { BiFootball } from 'react-icons/bi'
 
 import { MainContainer, FormContainer } from "./HomeStyle";
 import { requestData } from "../../utils/fetchApi";
 import IResponse from '../../interfaces/IResponse';
-import AppContext from "../../context/AppContext";
-import IContext from "../../interfaces/IContext";
 
 const Home = () => {
     const navigate = useNavigate();
-    const { key, setKey }: IContext = useContext(AppContext);
     const [error, setError] = useState(false);
+    const [key, setKey] = useState('');
 
     useEffect(() => {
-        const key = localStorage
+        const apiKey = localStorage
             .getItem('key');
-        
-       if (key) {
-        navigate('/app');
-       }
+
+        if (apiKey) {
+            navigate('/app');
+        }
     }, [navigate]);
 
     const requisitionOperation = async () => {
@@ -38,7 +36,7 @@ const Home = () => {
         e.preventDefault();
         requisitionOperation();
     };
-    
+
     const login = (e: KeyboardEvent) => {
         if (e.key === "Enter") {
             e.preventDefault();
@@ -61,7 +59,7 @@ const Home = () => {
                 <input
                     type="text"
                     placeholder="Digite a sua API Key."
-                    onChange={({target}) => setKey(target.value)}
+                    onChange={({ target }) => setKey(target.value)}
                     onKeyDown={() => login}
                 />
                 {
@@ -69,7 +67,7 @@ const Home = () => {
                         <p>Chave inválida</p>
                     )
                 }
-                
+
                 <button type="submit">Entrar</button>
             </FormContainer>
         </MainContainer>
