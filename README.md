@@ -33,7 +33,7 @@
   <summary>Tabela de Conteúdo</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Sobre o Projeto</a>
+      <a href="#Sobre o Projeto">Sobre o Projeto</a>
       <ul>
         <li><a href="#built-with">Desenvolvido com</a></li>
       </ul>
