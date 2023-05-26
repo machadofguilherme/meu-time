@@ -131,9 +131,9 @@ as orientações do site oficial, <a href="https://git-scm.com" target="_blank">
 <!-- USAGE EXAMPLES -->
 ## Uso
 
-Ao abrir a aplicação pela primeira vez, será solicitado que adicione uma chave API.<br />
-Ela pode ser obtida, cadastrando-se em <a href="https://api-football.com/" target="_blank">API Sports</a>.<br />
-Pegue a chave gerada automaticamente no Dashboard do sistema da API Sports e insira no campo<br />
+Ao abrir a aplicação pela primeira vez, será solicitado que adicione uma chave API.
+Ela pode ser obtida, cadastrando-se em <a href="https://api-football.com/" target="_blank">API Sports</a>.
+Pegue a chave gerada automaticamente no Dashboard do sistema da API Sports e insira no campo
 da aplicação. O login será efetuado e você irá para a tela principal em uma rota `/app`.
 Como é possível observar na imagem abaixo:<br /><br />
 IMAGEM<br /><br />
