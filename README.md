@@ -135,8 +135,6 @@ Ao abrir a aplicação pela primeira vez, será solicitado que adicione uma chav
 Ela pode ser obtida, cadastrando-se em <a href="https://api-football.com/" target="_blank">API Sports</a>.
 Pegue a chave gerada automaticamente no Dashboard do sistema da API Sports e insira no campo
 da aplicação. O login será efetuado e você irá para a tela principal em uma rota `/app`.
-Como é possível observar na imagem abaixo:<br /><br />
-IMAGEM<br /><br />
 A aplicação é bem intuitiva, basta ir selecionando as informações desejadas e seguir clicando em "Próximo".
 Ao final, os dados da equipe de futebol escolhida serão mostradas na tela para você.
 
