@@ -57,8 +57,8 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Selecione um país, escolha um campeonato, decida entre uma temporada e um time e a aplicação fornecerá na sua tela<br />
-informações sobre o time que você escolheu. Quais jogadores estavam contratados naquele ano, quais as formações mais<br />
+Selecione um país, escolha um campeonato, decida entre uma temporada e um time e a aplicação fornecerá na sua tela
+informações sobre o time que você escolheu. Quais jogadores estavam contratados naquele ano, quais as formações mais
 utilizadas por essa equipe em suas partidas e até mesmo uma estatística a respeito das partidas do seu time do coração.
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
