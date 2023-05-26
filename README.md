@@ -65,8 +65,10 @@ utilizadas por essa equipe em suas partidas e até mesmo uma estatística a resp
 
 
 ### Desenvolvido com:
-<br /><br />
+
 <span align="center">
+
+<br /><br />
 
 [![React][React.js]][React-url]
 ![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -74,8 +76,9 @@ utilizadas por essa equipe em suas partidas e até mesmo uma estatística a resp
 ![](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![](https://img.shields.io/badge/testing%20library-323330?style=for-the-badge&logo=testing-library&logoColor=red)
 
-  </span>
 <br /><br />
+
+</span>
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
