@@ -95,7 +95,7 @@ Atente-se aos pré-requisitos na seção abaixo, pois são extremamente importan
 
 * npm<br />
 Certifique-se de possuir a versão mais recente do NodeJS instalada em seu sistema.
-Caso não possua, **[clique aqui](https://nodejs.org/en)** para ir ao site oficial do projeto e
+Caso não possua, <a href="https://nodejs.org/en" target="_blank">clique aqui</a> para ir ao site oficial do projeto e
 siga os passos indicados de acordo com o seu sistema operacional.
 Lembre-se, caso utilize Linux, há diversas variantes envolvidas, como, por exemplo, o empacotamento
 que varia e tende a mudar completamente de distribuição para distribuição.
@@ -103,7 +103,7 @@ que varia e tende a mudar completamente de distribuição para distribuição.
 * git<br />
 Instale o Git no seu sistema operacional. As mesmas informações citadas acima são válidas aqui. Busque a
 documentação do seu sistema operacional em caso de distribuições Linux. No caso do Windows, instale seguindo
-as orientações do site oficial, **[clicando aqui](https://git-scm.com)**.
+as orientações do site oficial, <a href="https://git-scm.com" target="_blank">clicando aqui</a>.
 
 ### Instalação
 
@@ -132,7 +132,7 @@ as orientações do site oficial, **[clicando aqui](https://git-scm.com)**.
 ## Uso
 
 Ao abrir a aplicação pela primeira vez, será solicitado que adicione uma chave API.<br />
-Ela pode ser obtida, cadastrando-se em **[API Sports](https://api-football.com/)**.<br />
+Ela pode ser obtida, cadastrando-se em <a href="https://api-football.com/" target="_blank">API Sports</a>.<br />
 Pegue a chave gerada automaticamente no Dashboard do sistema da API Sports e insira no campo<br />
 da aplicação. O login será efetuado e você irá para a tela principal em uma rota `/app`.
 Como é possível observar na imagem abaixo:<br /><br />
@@ -146,9 +146,9 @@ Ao final, os dados da equipe de futebol escolhida serão mostradas na tela para 
 <!-- CONTACT -->
 ## Contato
 
-Guilherme Machado - **[Linkedin](https://www.linkedin.com/in/machadocode/)** - machadofguilherme@proton.me
+Guilherme Machado - <a href="https://www.linkedin.com/in/machadocode/" target="_blank">Linkedin</a> - machadofguilherme@proton.me
 
-GitHub: **[https://github.com/machadofguilherme/meu-time](https://github.com/machadofguilherme/meu-time)**
+GitHub: <a href="https://github.com/machadofguilherme/meu-time" target="_blank">https://github.com/machadofguilherme/meu-time</a>
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
