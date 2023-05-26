@@ -107,22 +107,22 @@ as orientações do site oficial, <a href="https://git-scm.com" target="_blank">
 
 ### Instalação
 
-1. Clone esse repositório em um diretório de sua preferência. Para isso, execute em um terminal:
+1. Clone esse repositório em um diretório de sua preferência. Para isso, execute em um terminal:<br />
    ```sh
    git clone https://github.com/machadofguilherme/meu-time.git
    ```
-2. Entre no diretório clonado:
-  ```sh
-  cd meu-time
-  ```
-3. Instale as dependências utilizadas pelo projeto utilizando o gerenciador de pacotes NPM, provido pelo NodeJS:
-   ```sh
-   npm i
-   ```
-4. Execute o projeto:
-   ```sh
-   npm run dev
-   ```
+2. Entre no diretório clonado:<br />
+    ```sh
+    cd meu-time
+    ```
+3. Instale as dependências utilizadas pelo projeto utilizando o gerenciador de pacotes NPM, provido pelo NodeJS:<br />
+    ```sh
+    npm i
+    ```
+4. Execute o projeto:<br />
+    ```sh
+    npm run dev
+    ```
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
