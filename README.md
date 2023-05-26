@@ -33,20 +33,20 @@
   <summary>Tabela de Conteúdo</summary>
   <ol>
     <li>
-      <a href="#Sobre o Projeto">Sobre o Projeto</a>
+      <a href="#sobre-o-projeto">Sobre o Projeto</a>
       <ul>
-        <li><a href="#built-with">Desenvolvido com</a></li>
+        <li><a href="#desenvolvido-com">Desenvolvido com</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Primeiros Passos</a>
+      <a href="#primeiros-passos">Primeiros Passos</a>
       <ul>
-        <li><a href="#prerequisites">Pré-requisitos</a></li>
-        <li><a href="#installation">Instalação</a></li>
+        <li><a href="#pre-requisitos">Pré-requisitos</a></li>
+        <li><a href="#instalacao">Instalação</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Uso</a></li>
-    <li><a href="#contact">Contato</a></li>
+    <li><a href="#uso">Uso</a></li>
+    <li><a href="#contato">Contato</a></li>
   </ol>
 </details>
 
