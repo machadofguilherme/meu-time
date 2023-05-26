@@ -41,7 +41,7 @@
     <li>
       <a href="#primeiros-passos">Primeiros Passos</a>
       <ul>
-        <li><a href="#pre-requisitos">Pré-requisitos</a></li>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
         <li><a href="#instalacao">Instalação</a></li>
       </ul>
     </li>
