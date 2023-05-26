@@ -43,13 +43,14 @@ const Home = () => {
             requisitionOperation();
         }
     }
-
+    
     return (
         <MainContainer>
             <header>
-                <i>
+                <i data-testid="logo">
                     <BiFootball />
                 </i>
+                
                 <h1>
                     Meu Time
                 </h1>

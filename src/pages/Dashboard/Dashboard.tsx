@@ -8,6 +8,8 @@ import AppContext from "../../context/AppContext";
 import Season from "../../components/Season/Season";
 import { DashboardContainer, SectionDashboard } from "./DashboardStyle";
 import League from "../../components/League/League";
+import Team from "../../components/Team/Team";
+import Info from "../../components/Info/Info";
 
 interface Props {
   country: ICountry[];
@@ -51,6 +53,8 @@ const Dashboard: React.FC<Props> = () => {
         {step === 'country' && <Country country={country} />}
         {step === 'season' && <Season />}
         {step === 'league' && <League />}
+        {step === 'team' && <Team />}
+        {step === 'info' && <Info />}
       </form>
     </DashboardContainer>
   )

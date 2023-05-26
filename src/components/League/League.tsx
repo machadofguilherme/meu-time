@@ -8,9 +8,9 @@ import ILeague from "../../interfaces/ILeague";
 import Image from "../Image/Image";
 
 const League = () => {
+    const [logo, setLogo] = useState<string>('');
     const [league, setLeague] = useState<ILeague[]>([]);
     const [leagueName, setLeagueName] = useState<string>('');
-    const [logo, setLogo] = useState<string>('');
     const [isDisable, setIsDisable] = useState<boolean>(false);
 
     const { setStep } = useContext(AppContext);
@@ -40,12 +40,20 @@ const League = () => {
             setLogo(findByName[0].league.logo);
             setIsDisable(true);
 
+            const id = findByName[0].league.id;
+
+            const data = {
+                id,
+                leagueName
+            }
+
+            localStorage.setItem('league', JSON.stringify(data));
         } else {
             setLogo('');
         }
     }, [league, leagueName]);
 
-    const nextScreen = () => setStep('');
+    const nextScreen = () => setStep('team');
 
     return (
         <LeagueContainer>

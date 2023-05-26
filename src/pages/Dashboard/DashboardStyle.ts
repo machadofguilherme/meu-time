@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const DashboardContainer = styled.main`
-    width: 100vw;
-    height: 70vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 `
 
 export const SectionDashboard = styled.section`
